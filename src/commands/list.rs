@@ -2,6 +2,7 @@ use colored::Colorize;
 
 use crate::config::{get_config_dir, get_device_name, get_device_peripherals, get_device_profiles};
 
+
 pub fn list_tablets() {
     // Get the config directory
     let config_dir = get_config_dir().unwrap();
