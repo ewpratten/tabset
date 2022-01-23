@@ -84,3 +84,16 @@ pub fn get_device_profiles(config_name: &str) -> Result<Vec<String>, std::io::Er
             .collect::<Vec<_>>()
     });
 }
+
+/// Gets the path to the script for a profile for a tablet from its config name and profile name
+pub fn get_profile_script(
+    config_name: &str,
+    profile_name: &str,
+) -> Result<PathBuf, std::io::Error> {
+    let config_dir = get_config_dir()?;
+    return Ok(config_dir
+        .join("devices")
+        .join(config_name)
+        .join("profiles")
+        .join(format!("{}.sh", profile_name)));
+}
