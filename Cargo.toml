@@ -15,4 +15,4 @@ categories = []
 [dependencies]
 clap = { version = "2.33", features = ["color"] }
 colored = "2.0.0"
-directories = "4.0.1"
+directories = "5.0.0"
